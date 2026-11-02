@@ -88,7 +88,7 @@ Drawdy draws the board into cached 1,024 px tiles at a few zoom levels and finds
 
 ## Results page
 
-[`index.html`](index.html) is the hand-drawn results page, with an animation of each editor's frame rate. It is one self-contained file; clone the repo and open it in a browser:
+[`index.html`](index.html) is the hand-drawn results page, with an animation of each editor's frame rate. It is a single file with the data and screenshots built in; its styles and fonts load from CDNs, so it needs an internet connection. Clone the repo and open it in a browser:
 
 ```sh
 gh repo clone mickyngub/drawdy-benchmarks && open drawdy-benchmarks/2026-09-24-canvas-10k/index.html
