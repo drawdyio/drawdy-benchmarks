@@ -8,6 +8,10 @@ The September results hold. With all 10,000 elements in view, Drawdy pans at 120
 
 ![Frame rate with 10,000 elements](charts/frame-rate.svg)
 
+![Three rows panning the same 10,000-element board: Drawdy moves smoothly, Excalidraw and tldraw jump about ten times a second](images/whole-board-pan.gif)
+
+*Real renders from each editor on the whole-board pan path. Each row shows a new frame only as often as that editor drew one in this benchmark (median frame rate). A GIF plays at most 50 frames a second, so Drawdy's 120 shows as 50 here.*
+
 ## What changed since 24 September
 
 | | 24 Sep 2026 | 2 Nov 2026 |
@@ -83,4 +87,4 @@ tldraw's licence was checked again on 2 November 2026. It has not changed since 
 |---|---|
 | `results.json` | Every run's raw numbers plus machine and version details, in the same format as the September study |
 | `charts/` | The charts above, generated from `results.json` by `node scripts/charts.mjs 2026-11-02-canvas-10k-recheck` |
-| `images/` | Editor screenshots |
+| `images/` | Editor screenshots, and `whole-board-pan.gif`: a 720 × 200 px crop from the centre of each editor's view, 4 s (one lap of the camera path) at 50 frames a second |
