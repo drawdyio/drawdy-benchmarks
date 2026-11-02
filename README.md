@@ -13,3 +13,7 @@ Charts are generated from each study's `results.json`:
 ```sh
 node scripts/charts.mjs 2026-09-24-canvas-10k
 ```
+
+## Licence
+
+© 2026 Pichaya Puttekulangkura. The scripts in `scripts/` are licensed under the [MIT licence](LICENSE-MIT). Everything else (results, documentation, charts, images and results pages) is licensed under [CC BY 4.0](LICENSE-CC-BY-4.0): you can reuse it with credit. The Excalidraw and tldraw interfaces shown in the screenshots belong to their owners.
