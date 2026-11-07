@@ -27,7 +27,7 @@ Everything not listed here is as in the [September methodology](../2026-09-24-ca
 
 ### Why draw.io pans at 120 fps
 
-draw.io draws the board as one SVG and pans by scrolling the element that holds it. Chrome scrolls on its compositor: it moves the picture it has already painted without running draw.io's code or repainting the SVG, so panning costs almost nothing however many elements there are. A screen recording of the 100% zoom pan showed no blank, not-yet-painted areas. Zooming changes the SVG's scale, so Chrome has to paint all 10,000 elements again. That is where draw.io slows down: 57 fps, with 8 frames over 50 ms.
+draw.io draws the board as one SVG and pans by scrolling the element that holds it, so nothing has to be redrawn. A Chrome trace of the pans shows, per frame, about 0.1 ms in draw.io's own code (its scroll handlers) and about 3 ms of main-thread work in total, with no repaint of the SVG's shapes; Chrome turns the already-recorded drawing into pixels on background threads and the GPU as the view moves. In the same trace the GPU process put 118 to 119 frames a second on screen, matching the frame timer. A screen recording of the 100% zoom pan showed no blank, not-yet-drawn areas. Zooming changes the SVG's scale, so Chrome has to paint all 10,000 elements again. That is where draw.io slows down: 57 fps, with 8 frames over 50 ms.
 
 draw.io's own mouse-wheel zoom shows a scaled copy of the old picture and redraws 0.5 s after the wheel stops. The script sets the zoom through draw.io's graph API instead, so every frame is drawn at its true zoom, as the other editors draw through theirs.
 
