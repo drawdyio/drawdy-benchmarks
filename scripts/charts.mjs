@@ -16,7 +16,8 @@ const EDITORS = [
     { id: "drawdy", name: "Drawdy", color: "#9cc400" },
     { id: "excalidraw", name: "Excalidraw", color: "#8f79e0" },
     { id: "tldraw", name: "tldraw", color: "#e07a51" },
-];
+    { id: "drawio", name: "draw.io", color: "#4a90d9" },
+].filter(({ id }) => id in summary);
 const HZ = Math.round(meta.displayHz);
 const FONT = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif";
 const INK = "#18181b";
@@ -90,7 +91,7 @@ function frameRate() {
         ["closeup-pan", "Pan at 100% zoom"],
     ];
     const top = 126;
-    const groupH = 134;
+    const groupH = 44 + EDITORS.length * 30;
     const bottom = top + groups.length * groupH - 18;
     let body = header(
         "Frame rate with 10,000 elements",
