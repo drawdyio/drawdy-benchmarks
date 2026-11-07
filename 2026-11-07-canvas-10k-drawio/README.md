@@ -8,9 +8,9 @@ draw.io pans as smoothly as Drawdy: 120 fps with the whole board in view and at 
 
 ![Frame rate with 10,000 elements](charts/frame-rate.svg)
 
-![Four rows panning the same 10,000-element board: Drawdy and draw.io move smoothly, Excalidraw and tldraw jump about ten times a second](images/whole-board-pan.gif)
+![Three rows panning the same 10,000-element board: Drawdy moves smoothly, Excalidraw and tldraw jump about ten times a second](images/whole-board-pan.gif)
 
-*Real renders from each editor on the whole-board pan path. Each row shows a new frame only as often as that editor drew one in this benchmark (median frame rate). A GIF plays at most 50 frames a second, so Drawdy's and draw.io's 120 show as 50 here.*
+*Real renders from each editor on the whole-board pan path. Each row shows a new frame only as often as that editor drew one in this benchmark (median frame rate). A GIF plays at most 50 frames a second, so Drawdy's 120 shows as 50 here.*
 
 ## How draw.io was tested
 
@@ -118,4 +118,4 @@ draw.io is licensed under Apache 2.0, which allows this use and has no clause ab
 |---|---|
 | `results.json` | Every run's raw numbers plus machine and version details, in the same format as the earlier studies |
 | `charts/` | The charts above, generated from `results.json` by `node scripts/charts.mjs 2026-11-07-canvas-10k-drawio` |
-| `images/` | Editor screenshots, and `whole-board-pan.gif`: a 720 × 200 px crop from the centre of each editor's canvas, 4 s (one lap of the camera path) at 50 frames a second |
+| `images/` | Editor screenshots, and `whole-board-pan.gif`: a 720 × 200 px crop from the centre of the Drawdy, Excalidraw and tldraw canvases, 4 s (one lap of the camera path) at 50 frames a second |

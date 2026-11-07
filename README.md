@@ -4,9 +4,9 @@
 
 ![Frame rate with 10,000 elements: Drawdy 120, 117 and 120 fps; Excalidraw 9.9, 1.6 and 99; tldraw 12, 54 and 94; draw.io 120, 57 and 120](2026-11-07-canvas-10k-drawio/charts/frame-rate.svg)
 
-![Four rows panning the same 10,000-element board: Drawdy and draw.io move smoothly, Excalidraw and tldraw jump about ten times a second](2026-11-07-canvas-10k-drawio/images/whole-board-pan.gif)
+![Three rows panning the same 10,000-element board: Drawdy moves smoothly, Excalidraw and tldraw jump about ten times a second](2026-11-07-canvas-10k-drawio/images/whole-board-pan.gif)
 
-*Real renders from each editor. Each row shows a new frame only as often as that editor drew one in the benchmark. A GIF plays at most 50 frames a second, so Drawdy's and draw.io's 120 show as 50 here.*
+*Real renders from each editor. Each row shows a new frame only as often as that editor drew one in the benchmark. A GIF plays at most 50 frames a second, so Drawdy's 120 shows as 50 here.*
 
 \* The zoom result is not like for like. While the zoom moves, Drawdy shows its cached tiles scaled and redraws them sharp 80 ms after each stop; draw.io was made to redraw fully on every frame. draw.io's own wheel zoom also shows a scaled picture, but redraws only 0.5 s after the wheel stops. Both pan without redrawing: Drawdy from its tile cache, draw.io by scrolling an SVG Chrome has already drawn.
 
