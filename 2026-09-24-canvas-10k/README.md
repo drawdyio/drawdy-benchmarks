@@ -4,6 +4,8 @@ We opened the same 10,000-element board in Drawdy, Excalidraw and tldraw on one 
 
 **Re-checked on 2 November 2026** with tldraw 5.6.0, the latest Drawdy and Chrome 155: the results hold. See [the re-check](../2026-11-02-canvas-10k-recheck/).
 
+**draw.io added on 7 November 2026:** it pans at 120 fps like Drawdy and zooms at 57 fps. See [the draw.io study](../2026-11-07-canvas-10k-drawio/).
+
 ## Results at a glance
 
 - **Whole board on screen:** Drawdy draws 120 frames a second, the most the screen can show. Excalidraw draws 10 and tldraw 11, so Drawdy draws 11 to 12 times as many frames.

@@ -1,0 +1,865 @@
+{
+  "meta": {
+    "date": "2026-11-07T10:41:32.935Z",
+    "machine": "Apple M4 Pro, 24 GB",
+    "browser": "Google Chrome 156.0.8078.80",
+    "displayHz": 119.97000749812545,
+    "versions": {
+      "drawdy": "98c74da9f",
+      "excalidraw": "0.18.1",
+      "tldraw": "5.6.0",
+      "drawio": "32.6.10"
+    },
+    "viewport": "1440x900 CSS px at 2x",
+    "runs": 3,
+    "seconds": 6
+  },
+  "summary": {
+    "drawdy": {
+      "count": 10000,
+      "loadMs": 185.0999999999999,
+      "jsHeapMB": 19.427200317382812,
+      "rendererMB": 66.796875,
+      "gpuMB": -0.140625,
+      "footprintMB": 19,
+      "scenarios": {
+        "overview-pan": {
+          "fps": 119.99200053329778,
+          "p50": 8.300000000000182,
+          "p95": 9.100000000000364,
+          "p99": 9.299999999999272,
+          "max": 9.399999999999636,
+          "over50": 0
+        },
+        "zoom-bursts": {
+          "fps": 116.64739303132384,
+          "p50": 8.299999999999272,
+          "p95": 9.200000000000728,
+          "p99": 17.099999999998545,
+          "max": 41.600000000000364,
+          "over50": 0
+        },
+        "closeup-pan": {
+          "fps": 120.01664585934249,
+          "p50": 8.299999999999272,
+          "p95": 9.099999999998545,
+          "p99": 9.299999999999272,
+          "max": 9.400000000001455,
+          "over50": 0
+        }
+      }
+    },
+    "excalidraw": {
+      "count": 10000,
+      "loadMs": 1475.699999988079,
+      "jsHeapMB": 27.4603271484375,
+      "rendererMB": 498.046875,
+      "gpuMB": 184.4375,
+      "footprintMB": 607,
+      "scenarios": {
+        "overview-pan": {
+          "fps": 9.876543209876544,
+          "p50": 100,
+          "p95": 108.39999999999964,
+          "p99": 109.10000000000036,
+          "max": 109.10000000000036,
+          "over50": 60
+        },
+        "zoom-bursts": {
+          "fps": 1.5652718355421054,
+          "p50": 100.70000000000073,
+          "p95": 2650.600000000002,
+          "p99": 2650.600000000002,
+          "max": 2650.600000000002,
+          "over50": 8
+        },
+        "closeup-pan": {
+          "fps": 99.13053109597388,
+          "p50": 8.30000000000291,
+          "p95": 9.100000000002183,
+          "p99": 9.299999999999272,
+          "max": 283.2999999999993,
+          "over50": 2
+        }
+      }
+    },
+    "tldraw": {
+      "count": 10000,
+      "loadMs": 1105.9000000119208,
+      "jsHeapMB": 255.25891876220703,
+      "rendererMB": 473.640625,
+      "gpuMB": -84.9375,
+      "footprintMB": 162,
+      "scenarios": {
+        "overview-pan": {
+          "fps": 11.509232774232858,
+          "p50": 91.30000000000109,
+          "p95": 116.69999999999891,
+          "p99": 125,
+          "max": 125,
+          "over50": 66
+        },
+        "zoom-bursts": {
+          "fps": 53.75239660367022,
+          "p50": 8.400000000001455,
+          "p95": 74.10000000000218,
+          "p99": 208.29999999999927,
+          "max": 283.3999999999978,
+          "over50": 17
+        },
+        "closeup-pan": {
+          "fps": 93.66666666666667,
+          "p50": 8.400000000001455,
+          "p95": 16.799999999999272,
+          "p99": 17.5,
+          "max": 17.600000000002183,
+          "over50": 0
+        }
+      }
+    },
+    "drawio": {
+      "count": 10000,
+      "loadMs": 996.9000000119213,
+      "jsHeapMB": 48.62904357910156,
+      "rendererMB": 278.828125,
+      "gpuMB": -0.8125,
+      "footprintMB": 80,
+      "scenarios": {
+        "overview-pan": {
+          "fps": 120.0020000333339,
+          "p50": 8.300000000001091,
+          "p95": 9.100000000000364,
+          "p99": 9.299999999999272,
+          "max": 9.399999999999636,
+          "over50": 0
+        },
+        "zoom-bursts": {
+          "fps": 57.334288904815104,
+          "p50": 8.400000000001455,
+          "p95": 42.5,
+          "p99": 58.39999999999782,
+          "max": 75,
+          "over50": 8
+        },
+        "closeup-pan": {
+          "fps": 120,
+          "p50": 8.299999999999272,
+          "p95": 9.099999999998545,
+          "p99": 9.299999999999272,
+          "max": 9.400000000001455,
+          "over50": 0
+        }
+      }
+    }
+  },
+  "results": [
+    {
+      "lib": "drawdy",
+      "run": 1,
+      "bytes": 6556492,
+      "load": {
+        "loadMs": 185.0999999999999,
+        "returnedMs": 58.39999997615814,
+        "count": 10000
+      },
+      "before": {
+        "jsHeapMB": 8.35837173461914,
+        "renderer": 457.78125,
+        "rendererFootprint": 135,
+        "GPU": 146.265625,
+        "GPUFootprint": 474
+      },
+      "after": {
+        "jsHeapMB": 27.785572052001953,
+        "renderer": 524.5625,
+        "rendererFootprint": 190,
+        "GPU": 177.75,
+        "GPUFootprint": 507
+      },
+      "scenarios": {
+        "overview-pan": {
+          "frames": 720,
+          "seconds": 6.000500000000001,
+          "fps": 119.99000083326388,
+          "p50": 8.300000000000182,
+          "p95": 9,
+          "p99": 9.299999999999272,
+          "max": 9.399999999999636,
+          "over50": 0
+        },
+        "zoom-bursts": {
+          "frames": 698,
+          "seconds": 6,
+          "fps": 116.33333333333333,
+          "p50": 8.299999999999272,
+          "p95": 9.200000000000728,
+          "p99": 17.099999999998545,
+          "max": 41.599999999998545,
+          "over50": 0
+        },
+        "closeup-pan": {
+          "frames": 721,
+          "seconds": 6.0075,
+          "fps": 120.01664585934249,
+          "p50": 8.30000000000291,
+          "p95": 9.099999999998545,
+          "p99": 9.299999999999272,
+          "max": 9.400000000001455,
+          "over50": 0
+        }
+      },
+      "errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ]
+    },
+    {
+      "lib": "excalidraw",
+      "run": 1,
+      "bytes": 6556494,
+      "load": {
+        "loadMs": 1475.699999988079,
+        "returnedMs": 36.89999997615814,
+        "count": 10000
+      },
+      "before": {
+        "jsHeapMB": 10.328384399414062,
+        "renderer": 489.390625,
+        "rendererFootprint": 153,
+        "GPU": 153.78125,
+        "GPUFootprint": 540
+      },
+      "after": {
+        "jsHeapMB": 37.79148483276367,
+        "renderer": 989.21875,
+        "rendererFootprint": 616,
+        "GPU": 331.140625,
+        "GPUFootprint": 684
+      },
+      "scenarios": {
+        "overview-pan": {
+          "frames": 62,
+          "seconds": 6.05,
+          "fps": 10.24793388429752,
+          "p50": 100,
+          "p95": 108.29999999999927,
+          "p99": 109.10000000000036,
+          "max": 109.10000000000036,
+          "over50": 62
+        },
+        "zoom-bursts": {
+          "frames": 29,
+          "seconds": 6.266599999999999,
+          "fps": 4.627708805412825,
+          "p50": 50.5,
+          "p95": 1558.2000000000007,
+          "p99": 1641.7000000000007,
+          "max": 1641.7000000000007,
+          "over50": 15
+        },
+        "closeup-pan": {
+          "frames": 715,
+          "seconds": 6.0002,
+          "fps": 119.16269457684743,
+          "p50": 8.30000000000291,
+          "p95": 9,
+          "p99": 9.299999999999272,
+          "max": 50,
+          "over50": 0
+        }
+      },
+      "errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ]
+    },
+    {
+      "lib": "tldraw",
+      "run": 1,
+      "bytes": 2157353,
+      "load": {
+        "loadMs": 1037.5999999880792,
+        "returnedMs": 881.1000000238419,
+        "count": 10000
+      },
+      "before": {
+        "jsHeapMB": 10.803054809570312,
+        "renderer": 674.65625,
+        "rendererFootprint": 334,
+        "GPU": 405.5,
+        "GPUFootprint": 798
+      },
+      "after": {
+        "jsHeapMB": 266.05700302124023,
+        "renderer": 1149.46875,
+        "rendererFootprint": 786,
+        "GPU": 320.625,
+        "GPUFootprint": 514
+      },
+      "scenarios": {
+        "overview-pan": {
+          "frames": 46,
+          "seconds": 5.966600000000001,
+          "fps": 7.7095833472999695,
+          "p50": 124.5,
+          "p95": 208.3000000000011,
+          "p99": 225,
+          "max": 225,
+          "over50": 46
+        },
+        "zoom-bursts": {
+          "frames": 299,
+          "seconds": 5.850100000000002,
+          "fps": 51.110237431838755,
+          "p50": 8.400000000001455,
+          "p95": 91.70000000000073,
+          "p99": 225,
+          "max": 283.2999999999993,
+          "over50": 17
+        },
+        "closeup-pan": {
+          "frames": 562,
+          "seconds": 6,
+          "fps": 93.66666666666667,
+          "p50": 8.400000000001455,
+          "p95": 16.799999999999272,
+          "p99": 17.5,
+          "max": 17.599999999998545,
+          "over50": 0
+        }
+      },
+      "errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ]
+    },
+    {
+      "lib": "drawio",
+      "run": 1,
+      "bytes": 4346493,
+      "load": {
+        "loadMs": 996.9000000119213,
+        "returnedMs": 981.8000000119209,
+        "count": 10000
+      },
+      "before": {
+        "jsHeapMB": 38.935909271240234,
+        "renderer": 710.640625,
+        "rendererFootprint": 263,
+        "GPU": 150.859375,
+        "GPUFootprint": 508
+      },
+      "after": {
+        "jsHeapMB": 87.57601547241211,
+        "renderer": 989.8125,
+        "rendererFootprint": 528,
+        "GPU": 155.484375,
+        "GPUFootprint": 313
+      },
+      "scenarios": {
+        "overview-pan": {
+          "frames": 720,
+          "seconds": 5.999899999999999,
+          "fps": 120.0020000333339,
+          "p50": 8.300000000001091,
+          "p95": 9.200000000000728,
+          "p99": 9.399999999999636,
+          "max": 9.399999999999636,
+          "over50": 0
+        },
+        "zoom-bursts": {
+          "frames": 344,
+          "seconds": 5.999899999999998,
+          "fps": 57.334288904815104,
+          "p50": 8.400000000001455,
+          "p95": 42.20000000000073,
+          "p99": 58.29999999999927,
+          "max": 67,
+          "over50": 8
+        },
+        "closeup-pan": {
+          "frames": 720,
+          "seconds": 6,
+          "fps": 120,
+          "p50": 8.299999999999272,
+          "p95": 9.100000000002183,
+          "p99": 9.299999999999272,
+          "max": 9.400000000001455,
+          "over50": 0
+        }
+      },
+      "errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ]
+    },
+    {
+      "lib": "excalidraw",
+      "run": 2,
+      "bytes": 6556494,
+      "load": {
+        "loadMs": 811.4000000119208,
+        "returnedMs": 38.30000001192093,
+        "count": 10000
+      },
+      "before": {
+        "jsHeapMB": 10.329833984375,
+        "renderer": 493.6875,
+        "rendererFootprint": 154,
+        "GPU": 156.921875,
+        "GPUFootprint": 671
+      },
+      "after": {
+        "jsHeapMB": 37.76561737060547,
+        "renderer": 991.734375,
+        "rendererFootprint": 616,
+        "GPU": 341.953125,
+        "GPUFootprint": 797
+      },
+      "scenarios": {
+        "overview-pan": {
+          "frames": 55,
+          "seconds": 6.0255,
+          "fps": 9.127873205543109,
+          "p50": 108.39999999999964,
+          "p95": 133.20000000000073,
+          "p99": 134,
+          "max": 134,
+          "over50": 55
+        },
+        "zoom-bursts": {
+          "frames": 6,
+          "seconds": 5.3332999999999995,
+          "fps": 1.1250070312939457,
+          "p50": 100.70000000000073,
+          "p95": 2774.899999999998,
+          "p99": 2774.899999999998,
+          "max": 2774.899999999998,
+          "over50": 5
+        },
+        "closeup-pan": {
+          "frames": 515,
+          "seconds": 6.008300000000003,
+          "fps": 85.71476124694169,
+          "p50": 8.30000000000291,
+          "p95": 9.100000000002183,
+          "p99": 9.299999999999272,
+          "max": 966.5999999999985,
+          "over50": 2
+        }
+      },
+      "errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ]
+    },
+    {
+      "lib": "tldraw",
+      "run": 2,
+      "bytes": 2157353,
+      "load": {
+        "loadMs": 1111.8000000238417,
+        "returnedMs": 948.9000000357628,
+        "count": 10000
+      },
+      "before": {
+        "jsHeapMB": 10.81964111328125,
+        "renderer": 674.640625,
+        "rendererFootprint": 334,
+        "GPU": 405.265625,
+        "GPUFootprint": 808
+      },
+      "after": {
+        "jsHeapMB": 266.13784408569336,
+        "renderer": 1147.390625,
+        "rendererFootprint": 791,
+        "GPU": 320.328125,
+        "GPUFootprint": 513
+      },
+      "scenarios": {
+        "overview-pan": {
+          "frames": 70,
+          "seconds": 6.025,
+          "fps": 11.618257261410788,
+          "p50": 83.69999999999891,
+          "p95": 108.40000000000146,
+          "p99": 117.40000000000055,
+          "max": 117.40000000000055,
+          "over50": 70
+        },
+        "zoom-bursts": {
+          "frames": 314,
+          "seconds": 5.841600000000001,
+          "fps": 53.75239660367022,
+          "p50": 8.400000000001455,
+          "p95": 66.60000000000218,
+          "p99": 192,
+          "max": 300,
+          "over50": 17
+        },
+        "closeup-pan": {
+          "frames": 566,
+          "seconds": 6.008299999999999,
+          "fps": 94.20301915683307,
+          "p50": 8.399999999997817,
+          "p95": 16.799999999999272,
+          "p99": 17.599999999998545,
+          "max": 17.600000000002183,
+          "over50": 0
+        }
+      },
+      "errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ]
+    },
+    {
+      "lib": "drawio",
+      "run": 2,
+      "bytes": 4346493,
+      "load": {
+        "loadMs": 977.4999999642368,
+        "returnedMs": 963.3999999761581,
+        "count": 10000
+      },
+      "before": {
+        "jsHeapMB": 39.256343841552734,
+        "renderer": 707.359375,
+        "rendererFootprint": 260,
+        "GPU": 155.875,
+        "GPUFootprint": 493
+      },
+      "after": {
+        "jsHeapMB": 87.8797378540039,
+        "renderer": 985.734375,
+        "rendererFootprint": 520,
+        "GPU": 155.0625,
+        "GPUFootprint": 313
+      },
+      "scenarios": {
+        "overview-pan": {
+          "frames": 720,
+          "seconds": 5.999899999999999,
+          "fps": 120.0020000333339,
+          "p50": 8.300000000001091,
+          "p95": 9.100000000000364,
+          "p99": 9.299999999999272,
+          "max": 9.399999999999636,
+          "over50": 0
+        },
+        "zoom-bursts": {
+          "frames": 230,
+          "seconds": 6.0499,
+          "fps": 38.017157308385265,
+          "p50": 8.400000000001455,
+          "p95": 67.29999999999927,
+          "p99": 245.70000000000073,
+          "max": 370,
+          "over50": 22
+        },
+        "closeup-pan": {
+          "frames": 720,
+          "seconds": 6,
+          "fps": 120,
+          "p50": 8.299999999999272,
+          "p95": 9,
+          "p99": 9.299999999999272,
+          "max": 9.400000000001455,
+          "over50": 0
+        }
+      },
+      "errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ]
+    },
+    {
+      "lib": "drawdy",
+      "run": 2,
+      "bytes": 6556492,
+      "load": {
+        "loadMs": 559.1999999761583,
+        "returnedMs": 125.29999995231628,
+        "count": 10000
+      },
+      "before": {
+        "jsHeapMB": 8.35805892944336,
+        "renderer": 457.9375,
+        "rendererFootprint": 133,
+        "GPU": 148.46875,
+        "GPUFootprint": 490
+      },
+      "after": {
+        "jsHeapMB": 27.78152847290039,
+        "renderer": 525.03125,
+        "rendererFootprint": 189,
+        "GPU": 148.09375,
+        "GPUFootprint": 453
+      },
+      "scenarios": {
+        "overview-pan": {
+          "frames": 720,
+          "seconds": 6.0004,
+          "fps": 119.99200053329778,
+          "p50": 8.300000000001091,
+          "p95": 9.100000000000364,
+          "p99": 9.299999999999272,
+          "max": 9.399999999999636,
+          "over50": 0
+        },
+        "zoom-bursts": {
+          "frames": 696,
+          "seconds": 5.9667,
+          "fps": 116.64739303132384,
+          "p50": 8.300000000001091,
+          "p95": 9,
+          "p99": 24.100000000000364,
+          "max": 41.600000000000364,
+          "over50": 0
+        },
+        "closeup-pan": {
+          "frames": 721,
+          "seconds": 6.007299999999999,
+          "fps": 120.02064155277748,
+          "p50": 8.299999999999272,
+          "p95": 9.099999999998545,
+          "p99": 9.299999999999272,
+          "max": 9.399999999997817,
+          "over50": 0
+        }
+      },
+      "errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ]
+    },
+    {
+      "lib": "tldraw",
+      "run": 3,
+      "bytes": 2157353,
+      "load": {
+        "loadMs": 1105.9000000119208,
+        "returnedMs": 937.1000000238419,
+        "count": 10000
+      },
+      "before": {
+        "jsHeapMB": 10.819019317626953,
+        "renderer": 679.046875,
+        "rendererFootprint": 334,
+        "GPU": 406.75,
+        "GPUFootprint": 897
+      },
+      "after": {
+        "jsHeapMB": 266.077938079834,
+        "renderer": 1152.6875,
+        "rendererFootprint": 788,
+        "GPU": 321.78125,
+        "GPUFootprint": 519
+      },
+      "scenarios": {
+        "overview-pan": {
+          "frames": 68,
+          "seconds": 5.9083000000000006,
+          "fps": 11.509232774232858,
+          "p50": 91.30000000000109,
+          "p95": 116.69999999999891,
+          "p99": 125,
+          "max": 125,
+          "over50": 66
+        },
+        "zoom-bursts": {
+          "frames": 315,
+          "seconds": 5.824999999999998,
+          "fps": 54.07725321888414,
+          "p50": 8.399999999999636,
+          "p95": 74.10000000000218,
+          "p99": 208.29999999999927,
+          "max": 283.3999999999978,
+          "over50": 16
+        },
+        "closeup-pan": {
+          "frames": 558,
+          "seconds": 5.992399999999998,
+          "fps": 93.11794940257663,
+          "p50": 8.400000000001455,
+          "p95": 16.80000000000291,
+          "p99": 17.5,
+          "max": 17.69999999999709,
+          "over50": 0
+        }
+      },
+      "errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ]
+    },
+    {
+      "lib": "drawio",
+      "run": 3,
+      "bytes": 4346493,
+      "load": {
+        "loadMs": 1124.8000000238417,
+        "returnedMs": 1106,
+        "count": 10000
+      },
+      "before": {
+        "jsHeapMB": 39.2297477722168,
+        "renderer": 710.0625,
+        "rendererFootprint": 261,
+        "GPU": 163.578125,
+        "GPUFootprint": 456
+      },
+      "after": {
+        "jsHeapMB": 87.85879135131836,
+        "renderer": 988.890625,
+        "rendererFootprint": 525,
+        "GPU": 162.328125,
+        "GPUFootprint": 312
+      },
+      "scenarios": {
+        "overview-pan": {
+          "frames": 721,
+          "seconds": 6.007299999999999,
+          "fps": 120.02064155277748,
+          "p50": 8.300000000001091,
+          "p95": 9,
+          "p99": 9.299999999999272,
+          "max": 9.399999999999636,
+          "over50": 0
+        },
+        "zoom-bursts": {
+          "frames": 345,
+          "seconds": 5.999899999999999,
+          "fps": 57.500958349305826,
+          "p50": 8.400000000001455,
+          "p95": 42.5,
+          "p99": 58.39999999999782,
+          "max": 75,
+          "over50": 7
+        },
+        "closeup-pan": {
+          "frames": 720,
+          "seconds": 6,
+          "fps": 120,
+          "p50": 8.299999999999272,
+          "p95": 9.099999999998545,
+          "p99": 9.299999999999272,
+          "max": 9.400000000001455,
+          "over50": 0
+        }
+      },
+      "errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ]
+    },
+    {
+      "lib": "drawdy",
+      "run": 3,
+      "bytes": 6556492,
+      "load": {
+        "loadMs": 182.8999999880789,
+        "returnedMs": 58,
+        "count": 10000
+      },
+      "before": {
+        "jsHeapMB": 8.358436584472656,
+        "renderer": 456.9375,
+        "rendererFootprint": 136,
+        "GPU": 147.390625,
+        "GPUFootprint": 546
+      },
+      "after": {
+        "jsHeapMB": 27.79147720336914,
+        "renderer": 523.734375,
+        "rendererFootprint": 191,
+        "GPU": 147.25,
+        "GPUFootprint": 473
+      },
+      "scenarios": {
+        "overview-pan": {
+          "frames": 721,
+          "seconds": 6.0082,
+          "fps": 120.00266302719616,
+          "p50": 8.300000000000182,
+          "p95": 9.200000000000728,
+          "p99": 9.300000000001091,
+          "max": 9.400000000001455,
+          "over50": 0
+        },
+        "zoom-bursts": {
+          "frames": 701,
+          "seconds": 6.008399999999998,
+          "fps": 116.66999533985756,
+          "p50": 8.299999999999272,
+          "p95": 9.200000000000728,
+          "p99": 16.799999999999272,
+          "max": 42,
+          "over50": 0
+        },
+        "closeup-pan": {
+          "frames": 720,
+          "seconds": 6,
+          "fps": 120,
+          "p50": 8.299999999999272,
+          "p95": 9.099999999998545,
+          "p99": 9.299999999999272,
+          "max": 9.400000000001455,
+          "over50": 0
+        }
+      },
+      "errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ]
+    },
+    {
+      "lib": "excalidraw",
+      "run": 3,
+      "bytes": 6556494,
+      "load": {
+        "loadMs": 1536.5999999642372,
+        "returnedMs": 41.89999997615814,
+        "count": 10000
+      },
+      "before": {
+        "jsHeapMB": 10.44333267211914,
+        "renderer": 490.921875,
+        "rendererFootprint": 154,
+        "GPU": 148.953125,
+        "GPUFootprint": 521
+      },
+      "after": {
+        "jsHeapMB": 37.90365982055664,
+        "renderer": 971.203125,
+        "rendererFootprint": 608,
+        "GPU": 333.390625,
+        "GPUFootprint": 690
+      },
+      "scenarios": {
+        "overview-pan": {
+          "frames": 60,
+          "seconds": 6.074999999999999,
+          "fps": 9.876543209876544,
+          "p50": 100,
+          "p95": 108.39999999999964,
+          "p99": 108.90000000000055,
+          "max": 108.90000000000055,
+          "over50": 60
+        },
+        "zoom-bursts": {
+          "frames": 9,
+          "seconds": 5.749800000000001,
+          "fps": 1.5652718355421054,
+          "p50": 200,
+          "p95": 2650.600000000002,
+          "p99": 2650.600000000002,
+          "max": 2650.600000000002,
+          "over50": 8
+        },
+        "closeup-pan": {
+          "frames": 537,
+          "seconds": 5.417099999999999,
+          "fps": 99.13053109597388,
+          "p50": 8.299999999999272,
+          "p95": 9.299999999999272,
+          "p99": 50.29999999999927,
+          "max": 283.2999999999993,
+          "over50": 7
+        }
+      },
+      "errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ]
+    }
+  ]
+}
