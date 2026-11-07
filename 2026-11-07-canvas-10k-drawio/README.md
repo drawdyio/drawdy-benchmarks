@@ -4,7 +4,7 @@ On 7 November 2026 we added draw.io to the [10,000-element benchmark](../2026-09
 
 ## Result
 
-draw.io pans as smoothly as Drawdy: 120 fps with the whole board in view and at 100% zoom, where Excalidraw manages 9.9 and tldraw 12 with the whole board in view. draw.io gets there by scrolling a picture it has already painted ([why](#why-drawio-pans-at-120-fps)). Drawdy is ahead on everything else: it zooms at 117 fps (draw.io 57), opens the board in 0.19 s (draw.io 1.0 s), its slowest frame is 42 ms (draw.io 75 ms), and its renderer process grows by 55 MB (draw.io 264 MB). Excalidraw's and tldraw's results are close to 2 November's.
+draw.io pans as smoothly as Drawdy: 120 fps with the whole board in view and at 100% zoom, where Excalidraw manages 9.9 and tldraw 12 with the whole board in view. draw.io gets there by scrolling a picture it has already painted ([why](#why-drawio-pans-at-120-fps)). Drawdy is ahead on everything else: it zooms at 117 fps against draw.io's 57, though the two draw differently while zooming ([see below](#why-drawio-pans-at-120-fps)), opens the board in 0.19 s (draw.io 1.0 s), its slowest frame is 42 ms (draw.io 75 ms), and its renderer process grows by 55 MB (draw.io 264 MB). Excalidraw's and tldraw's results are close to 2 November's.
 
 ![Frame rate with 10,000 elements](charts/frame-rate.svg)
 
@@ -27,7 +27,7 @@ Everything not listed here is as in the [September methodology](../2026-09-24-ca
 
 ### Why draw.io pans at 120 fps
 
-draw.io draws the board as one SVG and pans by scrolling the element that holds it, so nothing has to be redrawn. A Chrome trace of the pans shows, per frame, about 0.1 ms in draw.io's own code (its scroll handlers) and about 3 ms of main-thread work in total, with no repaint of the SVG's shapes; Chrome turns the already-recorded drawing into pixels on background threads and the GPU as the view moves. In the same trace the GPU process put 118 to 119 frames a second on screen, matching the frame timer. A screen recording of the 100% zoom pan showed no blank, not-yet-drawn areas. Zooming changes the SVG's scale, so Chrome has to paint all 10,000 elements again. That is where draw.io slows down: 57 fps, with 8 frames over 50 ms.
+draw.io draws the board as one SVG and pans by scrolling the element that holds it, so nothing has to be redrawn. Drawdy also pans without redrawing, by placing tiles it has already drawn. A Chrome trace of the pans shows, per frame, about 0.1 ms in draw.io's own code (its scroll handlers) and about 3 ms of main-thread work in total, with no repaint of the SVG's shapes; Chrome turns the already-recorded drawing into pixels on background threads and the GPU as the view moves. In the same trace the GPU process put 118 to 119 frames a second on screen, matching the frame timer. A screen recording of the 100% zoom pan showed no blank, not-yet-drawn areas. Zooming changes the SVG's scale, so Chrome has to paint all 10,000 elements again. That is where draw.io slows down: 57 fps, with 8 frames over 50 ms.
 
 draw.io's own mouse-wheel zoom shows a scaled copy of the old picture and redraws 0.5 s after the wheel stops, longer than this test's 0.25 s pauses, so its redraws would fall outside the measurement. The script sets the zoom through draw.io's graph API instead, so draw.io redraws at its true zoom on every frame, as Excalidraw and tldraw do. Drawdy, driven through its own API, scales its cached tiles while the zoom moves and redraws them sharp 80 ms after each stop. The zoom test therefore compares Drawdy's scaled-then-sharp drawing with a full redraw on every draw.io frame.
 
@@ -104,8 +104,9 @@ Each editor right after opening the board, zoomed to fit. All four drew the full
 1. **The [September caveats](../2026-09-24-canvas-10k/README.md#read-these-before-quoting-the-numbers) still apply:** tldraw's shape limit was raised, Drawdy ran without its app toolbar and panels, the zoom test pauses on purpose, and everything ran on one laptop.
 2. **draw.io ran with its side panels closed.** Its canvas is still shorter than the window, 790 px under its menu bar and toolbar. The board at the fit zoom is about 1,336 × 855 px, so a strip of about 30 px at the top and bottom was out of view. The other editors drew on the full 1,440 × 900 window.
 3. **draw.io drew clean shapes.** Excalidraw, tldraw and Drawdy drew their default hand-drawn styles, which take more work to draw.
-4. **draw.io's panning frames are Chrome scrolling a painted picture.** They are real frames on screen, but they measure Chrome's scrolling more than draw.io's drawing. The zoom test is where draw.io redraws.
-5. **The machine was not idle.** During the runs, macOS storage indexing and another app used about 2 of the 12 cores. Excalidraw's and tldraw's frame rates are within 5% of 2 November, except Excalidraw's zoom test: 1.6 fps against 3.5, from runs of 1.1 to 4.6 fps (2.3 to 5.7 on 2 November).
+4. **Panning shows drawing from a cache, for Drawdy and draw.io alike.** Drawdy places tiles it has already drawn; draw.io scrolls an SVG Chrome has already drawn. The frames are real frames on screen.
+5. **The zoom test is not like for like between Drawdy and draw.io.** Drawdy shows scaled cached tiles while the zoom moves and redraws them 80 ms after each stop; draw.io was made to redraw fully on every frame. With its own wheel zoom, draw.io would also show scaled pictures, redrawn 0.5 s after the wheel stops, which this test's 0.25 s pauses never reach.
+6. **The machine was not idle.** During the runs, macOS storage indexing and another app used about 2 of the 12 cores. Excalidraw's and tldraw's frame rates are within 5% of 2 November, except Excalidraw's zoom test: 1.6 fps against 3.5, from runs of 1.1 to 4.6 fps (2.3 to 5.7 on 2 November).
 
 ## Licences
 
