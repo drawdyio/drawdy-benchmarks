@@ -10,16 +10,14 @@
 
 \* The zoom result is not like for like. While the zoom moves, Drawdy shows its cached tiles scaled and redraws them sharp 80 ms after each stop; draw.io was made to redraw fully on every frame. draw.io's own wheel zoom also shows a scaled picture, but redraws only 0.5 s after the wheel stops. Both pan without redrawing: Drawdy from its tile cache, draw.io by scrolling an SVG Chrome has already drawn.
 
-## Opening, freezes and memory
+## Opening and freezes
 
 | 10,000 elements | Drawdy | Excalidraw 0.18.1 | tldraw 5.6.0 | draw.io 32.6.10 |
 |---|---:|---:|---:|---:|
 | Time to open the board | **0.19 s** | 1.5 s | 1.1 s | 1.0 s |
 | Longest freeze (slowest single frame) | **42 ms** | 2,651 ms | 283 ms | 75 ms |
-| Memory the board adds (renderer + GPU) | **19 MB** | 607 MB | 162 MB | 80 MB |
-| Renderer memory the board adds | **55 MB** | 462 MB | 454 MB | 264 MB |
 
-Lower is better. MacBook Pro M4 Pro, Chrome 156, 120 Hz screen, median of 3 runs. The renderer + GPU figure moved by up to 106 MB between runs; the renderer alone by under 10 MB. Every number and the method: [the draw.io study](2026-11-07-canvas-10k-drawio/).
+Lower is better. MacBook Pro M4 Pro, Chrome 156, 120 Hz screen, median of 3 runs. Every number and the method: [the draw.io study](2026-11-07-canvas-10k-drawio/).
 
 ## Studies
 
